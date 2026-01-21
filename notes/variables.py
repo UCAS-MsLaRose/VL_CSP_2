@@ -1,13 +1,3 @@
-name = "Tia"
-
-subject = "Computer Science"
-
-time = 11
-
-pi = 3.14
+name = "Xavier"
 
 print(name)
-
-print("Katie", "Jake")
-
-print(1021684032)
