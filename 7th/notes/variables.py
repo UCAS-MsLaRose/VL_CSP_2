@@ -1,4 +1,4 @@
-name = "Treyson"
+name = input("What is your name: ")
 
 room = 201
 
