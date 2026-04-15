@@ -3,32 +3,61 @@
     <head>
         <title>Notes on Advanced HTML</title>
         <meta charset="UTF-8"/>
+        <!--Embeded style sheets are good practice. They go inside the head tag-->
+        <style>
+            *{
+                background-color: rgb(252, 112, 189);
+            }
+            p{
+                background-color: rgba(255, 228, 196, 0.573);
+                text-align: center;
+            }
+            #ordered{
+                color:#7878ea
+            }
+            .section-2{
+                font-family: papyrus, fantasy;
+                border: 3px solid whitesmoke;
+            }
+            .odd{
+                color: orange;
+                background-color: beige;
+                color: green;
+            }
+            h1{
+                font-size: 4em;
+            }
+            img{
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
         <h1>Advanced HTML</h1>
+        <!--Inline style. It is BAD syntax-->
         <div style="background-color: blueviolet; height:100px; width: 100px;">
             <p>This is in a div!</p>
         </div>
         <div id="ordered">
         <p>This is how you make an ordered (numbered) list</p>
         <ol>
-            <li>Computer Science Principles</li>
+            <li class="odd">Computer Science Principles</li>
             <li>Computer Programming 1</li>
-            <li>Computer Programming 2</li>
+            <li class="odd">Computer Programming 2</li>
             <li>Advanced Computer Programming (Progrmming 3)</li>
         </ol>
         </div>
-        <div id="unordered" style="font-family: papyrus;">
+        <div id="unordered" class="section-2">
         <p>This is how you make an unordered (bulleted list) list</p>
         <ul style="list-style-type:circle">
-            <li>Apple</li>
+            <li class="odd">Apple</li>
             <li>Orange</li>
-            <li>Banana</li>
+            <li class="odd">Banana</li>
             <li>Peach</li>
-            <li>Pear</li>
+            <li class="odd">Pear</li>
         </ul>
         <a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">W3schools unordered lists</a>
         </div>
-        <img src="https://www.earthdiver.com/cdn-cgi/image/width=4000,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727684.jp?w=5246&h=2193&tick=1667491652923" alt="Mount Timpanogos" height="200px"/>
+        <img src="https://www.earthdiver.com/cdn-cgi/image/width=4000,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727684.jp?w=5246&h=2193&tick=1667491652923" alt="Mount Timpanogos"/>
     </body>
 </html>
