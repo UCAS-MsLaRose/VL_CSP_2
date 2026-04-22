@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Notes</title>
+        <meta charset="UTF-8">
+        <style>
+            #timp{
+                display: none;
+                width: 50%;
+            }
+        </style>
+        <script>
+            let count = 0
+            let imgs = ["https://upload.wikimedia.org/wikipedia/commons/1/12/Mount_Timpanogos_-_01-07-08.jpg","https://www.earthdiver.com/cdn-cgi/image/width=4000,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727684.jp?w=5246&h=2193&tick=1667491652923", "https://ctfassets.ksldigital.com/0wjmk6wgfops/5JD8w0POZhQ3qrd67umb3x/20641b214beec98ee856a8b51b278947/1d4f485432_d05d7611-2084-4c25-ac90-807915184a65.jpg?q=70"]
+            let img_count = 0
+            function change(){
+                if (img_count >= imgs.length -1){
+                    img_count = 0
+                }else{
+                    img_count += 1
+                }
+                document.getElementById('timp').src = imgs[img_count]
+            }
+            function update(){
+                document.getElementById('title').style.color = document.getElementById("color-choice").value
+            }
+            function add(){
+                count += 1
+                document.getElementById("number").innerHTML = count
+            }
+            function hover(id){
+                document.getElementById(id).style.backgroundColor = "red"
+                document.getElementById(id).style.color = "white"
+            }
+            function unhover(id){
+                document.getElementById(id).style.backgroundColor = "lightgrey"
+                document.getElementById(id).style.color = "black"
+            }
+            function show(){
+                if(document.getElementById("timp").style.display == "block"){
+                    document.getElementById("timp").style.display = "none"
+                }else{
+                document.getElementById("timp").style.display = "block"
+                }
+            }
+            //onclick onmouseover onmouseout onmousedown onmouseup
+        </script>
+    </head>
+    <body>
+        <h1 id="title" onmouseover="alert('This is about JavaScript!')">JavaScript Notes</h1>
+        <input type="color" id="color-choice">
+        <button onclick="update()" id="one" onmouseover="hover('one')" onmouseout="unhover('one')">Click Me!</button>
+        <p id="number" onmouseover="show()">0</p>
+        <button onclick="add()" id="two" onmouseover="hover('two')" onmouseout="unhover('two')">Add</button>
+        <br>
+        <img src="https://images.squarespace-cdn.com/content/v1/63c60d44c98af85334537583/644359f9-c213-4d77-bdb0-b78b7f8424f3/Mount_Timpanogos_at_sunset.jpg" alt="Mt Timp at sunset" id="timp" onmouseover="change()"/>
+    </body>
+</html>
